@@ -36,52 +36,21 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Análisis de Datos para Predictor de Eventos Coronarios},
-  pdfauthor={Author: yo y el resto},
+  pdftitle={Análisis de Datos y Predictor de Eventos Coronarios},
+  pdfauthor={Author: Gonzalo Mato, Lucas Cayol, Pedro Castillo y Santiago Barra},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -100,46 +69,96 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
-\title{Análisis de Datos para Predictor de Eventos Coronarios}
-\author{Author: yo y el resto}
-\date{Fecha: hoy}
+\title{Análisis de Datos y Predictor de Eventos Coronarios}
+\author{Author: Gonzalo Mato, Lucas Cayol, Pedro Castillo y Santiago Barra}
+\date{Fecha:}
 
 \begin{document}
 \maketitle
 
-\hypertarget{r-markdown}{%
-\subsection{R Markdown}\label{r-markdown}}
+\hypertarget{introducciuxf3n}{%
+\subsubsection{Introducción}\label{introducciuxf3n}}
 
-This is an R Markdown document. Markdown is a simple formatting syntax
-for authoring HTML, PDF, and MS Word documents. For more details on
-using R Markdown see \url{http://rmarkdown.rstudio.com}.
+Se elaboró una herramienta para uso médico y con motivo de dar un
+diagnóstico temprano de eventos coronarios para los pacientes que se
+presentan en la guardia de un hospital.
 
-When you click the \textbf{Knit} button a document will be generated
-that includes both content as well as the output of any embedded R code
-chunks within the document. You can embed an R code chunk like this:
+\hypertarget{relaciuxf3n-entre-suxedndromes-anginosos-y-eventos-coronarios}{%
+\subsection{Relación Entre Síndromes Anginosos y Eventos
+Coronarios}\label{relaciuxf3n-entre-suxedndromes-anginosos-y-eventos-coronarios}}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{summary}\NormalTok{(cars)}
-\end{Highlighting}
-\end{Shaded}
+En este grafico se analizó si el presentar síntomas anginosos aumenta la
+probabilidad de tener eventos coronarios. Los resultados muestran que,
+aunque el porcentaje es significativo, no es muy probable que tener
+síntomas anginosos lleve a tener eventos coronarios.
 
-\begin{verbatim}
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-\end{verbatim}
+\includegraphics{index_files/figure-latex/persona con SMA-1.pdf}
 
-\hypertarget{including-plots}{%
-\subsection{Including Plots}\label{including-plots}}
+\hypertarget{eventos-coronarios-segun-edad-y-genero}{%
+\subsection{Eventos Coronarios Segun Edad y
+Genero}\label{eventos-coronarios-segun-edad-y-genero}}
 
-You can also embed plots, for example:
+Al interpretar los gráficos se puede ver que los hombres tienen un pico
+estable dentro de los 30 y 40 años, mientras que las mujeres presentan
+un pico más pronunciado de eventos dentro del mismo rango de edad. Con
+los datos de la tabla analizamos que 4 de cada 5 pacientes que ingresan
+al hospital con eventos coronarios son hombres.
 
-Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
-chunk to prevent printing of the R code that generated the plot.
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+& Hombres & Mujeres\tabularnewline
+\midrule
+\endhead
+Número de pacientes con eventos & 97 & 24\tabularnewline
+Pico máximo de edad & 87 & 80\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{pacientes-masculinos-que-presentan-eventos}{%
+\subsubsection{Pacientes masculinos que presentan
+eventos}\label{pacientes-masculinos-que-presentan-eventos}}
+
+\includegraphics{index_files/figure-latex/eventos mas-1.pdf}
+
+\hypertarget{pacientes-femeninos-que-presentan-eventos}{%
+\subsubsection{Pacientes femeninos que presentan
+eventos}\label{pacientes-femeninos-que-presentan-eventos}}
+
+\includegraphics{index_files/figure-latex/eventos fem-1.pdf}
+
+\hypertarget{los-diabuxe9ticos-los-obesos-y-la-hipertensiuxf3n-arterial}{%
+\subsection{Los Diabéticos, los Obesos y la Hipertensión
+Arterial}\label{los-diabuxe9ticos-los-obesos-y-la-hipertensiuxf3n-arterial}}
+
+\hypertarget{diabuxe9ticos-obesos}{%
+\subsubsection{Diabéticos obesos}\label{diabuxe9ticos-obesos}}
+
+\includegraphics{index_files/figure-latex/diabeticos-1.pdf}
+
+Buscamos la relación entra la obesidad y la tendencia a tener diabetes.
+Y como a su vez ese grupo de personas tiene a tener HTA
+
+\hypertarget{diabeticos-con-hta}{%
+\subsubsection{Diabeticos con HTA}\label{diabeticos-con-hta}}
+
+\includegraphics{index_files/figure-latex/cars-1.pdf}
+
+Teniendo en cuenta los datos anteriores comparamos la tendencia de la
+diabetes a los eventos cardiacos.
+
+\hypertarget{relaciuxf3n-entre-fumadores-y-obesos}{%
+\subsection{Relación entre Fumadores y
+Obesos}\label{relaciuxf3n-entre-fumadores-y-obesos}}
+
+Se analizó la relación de los pacientes que tienen obesidad y que son
+fumadores, en cuanto a la tendencia de tener eventos cardiacos. La base
+de datos de pacientes no define si son fumadores activos o pasivos, por
+lo cual se agruparon ambos.
+
+\includegraphics{index_files/figure-latex/Grafico Comparando Gente Adicta-1.pdf}
+Dentro de la base de datos pudimos ver que el 10\% de los encuestados
+tienen alguno de estos dos factores de riesgo. Del total de 121 personas
+con eventos coronarios, 18 de estos son fumadores obesos, mostrando
+cierta tendencia de estos dos factores.
 
 \end{document}

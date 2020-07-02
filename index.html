@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
-<meta charset="utf-8" />
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
 
 <meta name="author" content="Author: Gonzalo Mato, Lucas Cayol, Pedro Castillo y Santiago Barra" />
 
@@ -16,178 +15,81 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/magnific-popup-1.1.0/magnific-popup.css" rel="stylesheet" />
+<script src="site_libs/magnific-popup-1.1.0/jquery.magnific-popup.min.js"></script>
+<link href="site_libs/readthedown-0.1/readthedown.css" rel="stylesheet" />
+<script src="site_libs/readthedown-0.1/readthedown.js"></script>
 
 
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-</style>
-
-
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-<style type="text/css">
-.code-folding-btn { margin-bottom: 4px; }
-</style>
-
-
-
 
 </head>
 
 <body>
 
 
-<div class="container-fluid main-container">
+<div id="content" data-toggle="wy-nav-shift">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("text-table-of-contents");
+});
+</script>
+
+<!-- code folding -->
+
+<nav id="nav-top" role="navigation" aria-label="top navigation">
+    <a role="button" href="#" data-toggle="wy-nav-top"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+</nav>
 
 
-
-
-<div class="fluid-row" id="header">
-
-<div class="btn-group pull-right">
-<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu" style="min-width: 50px;">
-<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
-<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
-</ul>
+<div id="header">
+<h1 class="title">Análisis de Datos y Predictor de Eventos Coronarios</h1>
 </div>
 
 
-
-<h1 class="title toc-ignore">Análisis de Datos y Predictor de Eventos Coronarios</h1>
-<h4 class="author">Author: Gonzalo Mato, Lucas Cayol, Pedro Castillo y Santiago Barra</h4>
-<h4 class="date">Fecha:</h4>
-
+<div id="sidebar">
+    <h2><a href="#content">Análisis de Datos y Predictor de Eventos Coronarios</a></h2>
+    <div id="table-of-contents">
+      <ul>
+      <li><a href="#relación-entre-síndromes-angin-osos-y-eventos-coronarios">Relación Entre Síndromes Angin osos y Eventos Coronarios</a></li>
+      <li><a href="#eventos-coronarios-segun-edad-y-genero">Eventos Coronarios Segun Edad y Genero</a></li>
+      <li><a href="#los-diabéticos-los-obesos-y-la-hipertensión-arterial">Los Diabéticos, los Obesos y la Hipertensión Arterial</a></li>
+      <li><a href="#relación-entre-fumadores-y-obesos">Relación entre Fumadores y Obesos</a></li>
+      <li><a href="#predictor">Predictor</a></li>
+      <li><a href="#validacion-del-modelo">Validacion del Modelo</a></li>
+      </ul>
+    </div>
+    
+    <div id="postamble" data-toggle="wy-nav-shift" class="status">
+              <p class="author"><span class="glyphicon glyphicon-user"></span> Author: Gonzalo Mato, Lucas Cayol, Pedro Castillo y Santiago Barra</p>
+                  <p class="date"><span class="glyphicon glyphicon-calendar"></span> Fecha:</p>
+        </div>
 </div>
 
-
+<div id="main">
+<pre><code>## Loading required package: MASS</code></pre>
+<pre><code>## Loading required package: ROCR</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   .default = col_double()
+## )</code></pre>
+<pre><code>## See spec(...) for full column specifications.</code></pre>
 <div id="introducción" class="section level3">
 <h3>Introducción</h3>
 <p>Se elaboró una herramienta para uso médico y con motivo de dar un diagnóstico temprano de eventos coronarios para los pacientes que se presentan en la guardia de un hospital.</p>
 </div>
-<div id="relación-entre-síndromes-anginosos-y-eventos-coronarios" class="section level2">
-<h2>Relación Entre Síndromes Anginosos y Eventos Coronarios</h2>
+<div id="relación-entre-síndromes-angin-osos-y-eventos-coronarios" class="section level2">
+<h2>Relación Entre Síndromes Angin osos y Eventos Coronarios</h2>
 <p>En este grafico se analizó si el presentar síntomas anginosos aumenta la probabilidad de tener eventos coronarios. Los resultados muestran que, aunque el porcentaje es significativo, no es muy probable que tener síntomas anginosos lleve a tener eventos coronarios.</p>
-<p><img src="index_files/figure-html/persona%20con%20SMA-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/persona%20con%20SMA-1.png" width="768" /></p>
 </div>
 <div id="eventos-coronarios-segun-edad-y-genero" class="section level2 tabset">
 <h2>Eventos Coronarios Segun Edad y Genero</h2>
@@ -215,69 +117,67 @@ summary {
 </table>
 <div id="pacientes-masculinos-que-presentan-eventos" class="section level3">
 <h3>Pacientes masculinos que presentan eventos</h3>
-<p><img src="index_files/figure-html/eventos%20mas-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/eventos%20mas-1.png" width="768" /></p>
 </div>
 <div id="pacientes-femeninos-que-presentan-eventos" class="section level3">
 <h3>Pacientes femeninos que presentan eventos</h3>
-<p><img src="index_files/figure-html/eventos%20fem-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/eventos%20fem-1.png" width="768" /></p>
 </div>
 </div>
 <div id="los-diabéticos-los-obesos-y-la-hipertensión-arterial" class="section level2 tabset">
 <h2>Los Diabéticos, los Obesos y la Hipertensión Arterial</h2>
 <div id="diabéticos-obesos" class="section level3">
 <h3>Diabéticos obesos</h3>
-<p><img src="index_files/figure-html/diabeticos-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/diabeticos-1.png" width="768" /></p>
 <p>Buscamos la relación entra la obesidad y la tendencia a tener diabetes. Y como a su vez ese grupo de personas tiene a tener HTA</p>
 </div>
 <div id="diabeticos-con-hta" class="section level3">
 <h3>Diabeticos con HTA</h3>
-<p><img src="index_files/figure-html/cars-1.png" width="672" /></p>
+<p><img src="index_files/figure-html/cars-1.png" width="768" /></p>
 <p>Teniendo en cuenta los datos anteriores comparamos la tendencia de la diabetes a los eventos cardiacos.</p>
 </div>
 </div>
 <div id="relación-entre-fumadores-y-obesos" class="section level2">
 <h2>Relación entre Fumadores y Obesos</h2>
 <p>Se analizó la relación de los pacientes que tienen obesidad y que son fumadores, en cuanto a la tendencia de tener eventos cardiacos. La base de datos de pacientes no define si son fumadores activos o pasivos, por lo cual se agruparon ambos.</p>
-<p><img src="index_files/figure-html/Grafico%20Comparando%20Gente%20Adicta-1.png" width="672" /> Dentro de la base de datos pudimos ver que el 10% de los encuestados tienen alguno de estos dos factores de riesgo. Del total de 121 personas con eventos coronarios, 18 de estos son fumadores obesos, mostrando cierta tendencia de estos dos factores.</p>
+<p><img src="index_files/figure-html/Grafico%20Comparando%20Gente%20Adicta-1.png" width="768" /> Dentro de la base de datos pudimos ver que el 10% de los encuestados tienen alguno de estos dos factores de riesgo. Del total de 121 personas con eventos coronarios, 18 de estos son fumadores obesos, mostrando cierta tendencia de estos dos factores.</p>
+</div>
+<div id="predictor" class="section level2">
+<h2>Predictor</h2>
+<div id="seleccion-de-variables" class="section level3">
+<h3>Seleccion de Variables</h3>
+<p>Para poder generar un predictor es necesario realizar una selección de variables. Esta selección de variables no puede ser aleatoria, las variables deben tener relevancia sobre los eventos cardiacos. Para eso usamos el método de selección de variables “stepwise” que consiste en la prueba de un modelo con una cantidad determinada de variables donde se les prueba su relevancia sobre los eventos caridacos y se van eliminando hasta que quedan solo las más relevantes. En nuestro caso las más relevantes fueron:</p>
+<p>-<em>Edad</em><br />
+-<em>Genero</em><br />
+-<em>Síndrome Anginoso</em><br />
+-<em>Duración de Dolor</em><br />
+-<em>Presencia de Dolor Actual</em><br />
+-<em>Diabetes </em><br />
+-<em>Obesidad </em><br />
+-<em>Antecedentes Familiares</em></p>
+<p>Luego de la selección de variables el Modelo utiliza las mismas para generar el predictor.</p>
+</div>
+</div>
+<div id="validacion-del-modelo" class="section level2">
+<h2>Validacion del Modelo</h2>
+<div id="curva-auroc" class="section level3">
+<h3>Curva AUROC</h3>
+<p>La curva AUROC sirve para demostrar la eficiencia de un modelo. Esta curva devuelve un índice entro 0 y 1, el cual al ser mas cercano al 1 representa una mayor eficiencia en el predictor.</p>
+<p><img src="index_files/figure-html/predictor-1.png" width="768" /> El índice de la curva AUROC es de 0,81 este numero demuestra que el predictor es eficiente ya que el índice es bastante elevado.</p>
+<p><img src="index_files/figure-html/predictor2-1.png" width="768" /></p>
+</div>
+</div>
+</div>
+
+
 </div>
 
 
 
 
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
 <script>
 $(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
+ 	  });
 </script>
 
 
@@ -286,7 +186,7 @@ $(document).ready(function () {
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
